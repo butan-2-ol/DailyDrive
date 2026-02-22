@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyDrive</title>
+    <title>DailyDrive | Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="images/drive-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -17,42 +18,74 @@
         <span>Tuesday April 30, 2028.</span>
        </div>
     </header>
-
+<!--
     <main>
         <section id="missions">
             <h2>This Week's Missions </h2>
 
-            <!--
+            
             <ul id="mission-list">
                 Missions will appear here dynamically 
             </ul>
 
-            -->
+            
         </section>
     </main>
+    -->
+    <div class="page-container">
+        <section class="sidebar">
 
-    <section  class="m-container">
-        <div class="m-card">
-            <p>Design the mission dashboard</p>
-            <button class="m-button">Mark Complete</button>
-        </div>
+            <div class="controls">
+                <span><i class=" fa-solid fa-magnifying-glass"></i></span>
+                <span><i class="fa-solid fa-x"></i></span>
+            </div>
 
-        <div class="m-card">
-            <p>Plan the data Structure</p>
-            <button class="m-button">Mark Complete</button>
-        </div>
+            <div class="profile">
+              <!--  <img src="images/mypic.jpg" alt="user image">-->
+                <p>
+                    Welcome, User!
+                </p>
 
-        <div class="m-card">
-            <p>Outline the MVP features</p>
-            <button class="m-button">Completed</button>
-        </div>
+            </div>
 
-        <div class="m-card">
-            <p>Build the landing page</p>
-            <button class="m-button">Mark Complete</button>
-        </div>
-    </section>
+            <div class="sidebar-links">
+                <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="#"><i class="fa-solid fa-calendar"></i>Weekly Missions</a>
+                <a href="#"><i class="fa-solid fa-calendar-days"></i>Monthly Milestones</a>
+                <a href="#"><i class="fa-solid fa-chart-simple"></i>Progress</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="logins">
+                <a>Sign Out</a>
+                <a>Register</a>
+            </div>
+
+            
+        </section>
+
+        <section  class="m-container">
+            <div class="m-card">
+                <p>Design the mission dashboard</p>
+                <button class="m-button">Mark Complete</button>
+            </div>
+
+            <div class="m-card">
+                <p>Plan the data Structure</p>
+                <button class="m-button">Mark Complete</button>
+            </div>
+
+            <div class="m-card">
+                <p>Outline the MVP features</p>
+                <button class="m-button">Completed</button>
+            </div>
+
+            <div class="m-card">
+                <p>Build the landing page</p>
+                <button class="m-button">Mark Complete</button>
+            </div>
+        </section>
+    </div>
+    <!--<script src="script.js"></script>-->
 </body>
 </html>
