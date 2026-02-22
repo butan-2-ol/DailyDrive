@@ -29,6 +29,7 @@ main {
     padding: 20px;
 }
 
+
 ul {
     list-style: none;
     padding: 0;
@@ -47,21 +48,26 @@ li {
 
 .m-card {
     display: flex;
+    flex-direction: column;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 1.2rem;
-    width: 100%;
+    margin: .5rem;
+    width: 80%;
     border-radius: .6rem;
     padding: .3rem .9rem;
     overflow: hidden;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     background: #fff;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex: 1;
 }
 
 .m-card p {
     font-size: 1.5rem;
     font-family: gadong, serif, helvetica;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0;
 }
 
 
@@ -69,12 +75,12 @@ li {
     background: #1d4b7a;
     border: none;
     border-radius: .35rem;
-    min-width: 10px;
+    min-width: 15rem;
     font-size: 1.3rem;  
     font-family: monaco;
     color: #eee;
     transition: all .3s ease-in-out;
-    padding: 2px 3px !important;
+    padding: .4rem .4rem ;
     height:  auto;
     font-weight: 500;
     cursor: pointer;
@@ -94,15 +100,41 @@ li {
     transform: translateY(-1.3px);
 }
 
+.cta {
+    display: flex;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 1.2rem;
+    width: 100%;
+    border-radius: .6rem;
+    padding: .3rem .9rem;
+    overflow: hidden;
+    justify-content: space-between;
+    background: #fff;
+    flex-wrap: nowrap;
+    margin-top: 5rem;
+    width: 50%;
+    gap: 5px;
+}
+
+.cta p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 .m-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 1000px;
+  justify-content: space-evenly;
+  max-height: 100vh;
   padding: 10px 20px;
-  margin: auto auto;
+
+  gap: 5px;
   flex: 1;
+  margin-top: 6rem;
 }
 
 .sidebar {
@@ -189,11 +221,12 @@ li {
 }
 
 .right-bar {
-    min-width: 200px;
+    max-width: 200px;
     background-color: #1d4b7a;
     padding: 20px;
     height: 100vh;
     padding-top: 7.5rem;
     display: flex;
     flex-direction: column;
+    flex: 0;
 }
