@@ -23,6 +23,7 @@ header {
     border-bottom: 1px solid #f5f5f5;
     position: fixed;
     width: 100%;
+    height: 4rem;
 }
 
 main {
@@ -100,6 +101,39 @@ li {
     transform: translateY(-1.3px);
 }
 
+.cta-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    color: red;
+}
+.cta-btn {
+    background: #1d4b7a;
+    border: none;
+    border-radius: .35rem;
+    min-width: 7rem;
+    font-size: 1.3rem;  
+    font-family: monaco;
+    color: #eee;
+    transition: all .3s ease-in-out;
+    padding: .3rem .33rem ;
+    height:  auto;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /*display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    */
+}
+
+
 .cta {
     display: flex;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -138,7 +172,7 @@ li {
 }
 
 .sidebar {
-    min-width: 200px;
+    max-width: 200px;
     background-color: #1d4b7a;
     padding: 20px;
     height: 100vh;
