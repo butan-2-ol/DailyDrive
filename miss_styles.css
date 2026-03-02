@@ -30,6 +30,33 @@ body {
     height: 30px;
 }
 
+.user-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 0.1rem 0.5rem;
+    border-radius: .8rem;
+    background: #c5ccd4;
+    color: #233;
+    margin-bottom: 2rem;
+}
+.user-wlc-note {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
+    padding: 1px;
+}
+
+
+.user-bar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
 .sidebar-cont {
     display: flex;
     flex-direction: column;
@@ -119,6 +146,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px 20px;
+
+    /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-height: 100vh;
+  padding: 10px 20px;
+
+  gap: 5px;
+  flex: 1;
+  margin-top: 6rem;
+}*/
     
 }
 
@@ -142,7 +185,7 @@ body {
 .miss-card button {
     padding: .6rem .8rem;
     border: none;
-    border-radius: .6rem;
+    border-radius: .9rem;
     background: #1d4b7a;
     color: #fff;
     font-weight: 600;
@@ -155,4 +198,45 @@ body {
     cursor: pointer;
     background: linear-gradient(to right, #211559, #14215f);
 
+}
+
+.unlock {
+    background: #fff;
+    padding: .4rem .6rem;
+    border-radius: .6rem;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0.4, 0.4);
+    width: 60%;
+
+}
+
+.arrow-btns {
+    display: flex;
+    gap: 15rem;
+    margin-bottom: .3rem;
+    padding: 1.5rem;
+
+}
+
+.arrow-btns button {
+    border: none;
+    padding: .5rem .6rem;
+    box-shadow: 0px 4px 14px rgba(0, 0.1, 0.2, 0.3);
+    border-radius: .9rem;
+    display: flex;
+    gap: 5px;
+    transition: all .8s ease;
+}
+
+.arrow-btns button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, rgb(82, 106, 106), #286eb5);
+}
+
+.btn1 {
+    background: #1d4b7a;
+    color: #fff;
+}
+
+.btn1 i {
+    color: 
 }
