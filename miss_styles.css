@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
+    box-sizing: border-box;
 }
 
 .page-cont {
@@ -37,8 +38,7 @@ body {
     gap: 15px;
     padding: 0.1rem 0.5rem;
     border-radius: .8rem;
-    background: #c5ccd4;
-    color: #233;
+    color: #fff;
     margin-bottom: 2rem;
 }
 .user-wlc-note {
@@ -47,12 +47,16 @@ body {
     gap: 1px;
     flex: 1;
     padding: 1px;
+    
 }
 
+.user-wlc-note p {
+    margin: 0px;
+}
 
 .user-bar img {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
@@ -60,21 +64,26 @@ body {
 .sidebar-cont {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 220px;
     background: linear-gradient(to top, #1d4b7a 0%, #062545 60%, #142a4c 100%);
     margin: 0;
     padding: 1.2rem 1rem;
     height: 100vh;
     color: #fff;
     flex: 2;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 .sidebar-cont a {
     color: #fff;
     text-decoration: none;
-    transition: all 0.6s ease-in;
+   /* transition: all 0.3s ease-in;*/
     padding: .3rem .1rem;
     width: 100%;
+    display: flex;
+    gap: 5px;
 }
 
 .nav-links a:hover {
@@ -82,6 +91,10 @@ body {
     background: #fff;
     color: #333;
     border-radius: .6rem;
+    border-left: 7px solid #3775b3;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
 
 }
 
@@ -118,28 +131,58 @@ body {
 .main-cont {
     display: flex;
     flex-direction: column;
-    flex: 3;
+    flex: 1;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    
 }
+
 
 .main-cont header {
     background: linear-gradient(to right, #1d4b7a 0%, #1d4b7a 60%, #142a4c 100%);
-   /* background-color: #1d4b7a;*/
     color: white;
-    padding: 5px 40px;
+    padding: .6rem .4rem;
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-   /* gap: 60%;*/
     padding: 0 auto;
     margin-left: auto;
     border-bottom: 1px solid #f5f5f5;
-   /* position: fixed;*/
+    position: sticky;
     width: 100%;
-    height: 4.5rem;
+    height: 5rem;
     box-shadow: 0px 6px 12px rgba(0, 0.1, 0.2, 0.3);
+    overflow: hidden;
+    top: 0;
+    position: sticky;
+}
+
+.h-message {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2px;
+    padding: .4rem .2rem;
+   
+    margin: 0px;
+}
+
+.h-message p {
+    margin: 1px;
+}
+
+.p2 {
+    font-size: .8rem;
+    
+}
+
+.p1 {
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 
 .miss-cont {
@@ -165,6 +208,97 @@ body {
     
 }
 
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   /* padding: 1.6rem .8rem;*/
+    width: 100%;
+    padding: 1.6rem .8rem;
+}
+
+.progress-bar {
+    background: #fff;
+    box-shadow: 0px 4px  10px rgba(0, 0.2, 0.2, 0.4);
+    padding: .4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .4rem;
+    
+}
+
+.progress-bar p {
+    margin: 0;
+
+}
+
+.pro-p1 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.pro-p1, .pro-p2 {
+    text-align: left !important;
+}
+
+.weekly-cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.weekly-card {
+    display: flex;
+    background: #fff;
+    padding: .4rem .6rem;
+    border-radius: .6rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 4px  10px rgba(0.8, 0, 0.8, 0.2);
+}
+
+.chck-btn {
+    border: none; 
+    border-radius: .8rem;
+    padding: .3rem .4rem;
+    background:  #9fc09d;
+    color: #3b7245;
+    cursor: pointer;
+}
+
+.m-btn {
+    border-radius: .2rem;
+    padding: .3rem .4rem;
+    background: #fff;
+    border: 1px solid rgb(214, 214, 159);
+    cursor: pointer;
+}
+
+.weekly-card select {
+    border: none;
+}
+
+.week-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.
+
+
+
+
+
+/*
 .miss-card {
     background: #fff;
     box-shadow: 0px 6px 12px rgba(0, 0.1, 0.2, 0.3);
@@ -208,7 +342,7 @@ body {
     width: 60%;
 
 }
-
+*/
 .arrow-btns {
     display: flex;
     gap: 15rem;
