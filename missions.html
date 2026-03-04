@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="miss_styles.css">
     <link rel="icon" href="images/drive-logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="page-cont"> 
@@ -46,7 +47,7 @@
         <div class="main-cont">
             <header>
                 <aside class="h-message">
-                    <p id="p1">Weekly Missions</p>
+                    <p id="p1"><b>Weekly Missions</b></p>
                     <p class="p2">Complete your missions and unlock new weeks</p>
                 </aside>
 
@@ -62,11 +63,15 @@
             <div class="main">
                 <div class="progress-bar">
                     <p class="pro-p1">Week 3 Progress</p>
-                    <p class="pro-p2">2/3 missions completed</p>
+                    <div class="pro-bar"></div>
+                    <p class="pro-p2">2 of 3 missions completed</p>
                 </div>
 
                 <div class="progress-bar">
-                    <h2>knKNV;inUVK/i'knokankLN'</h2>
+                    <h3 class="pb-p1">Keep Going</h3>
+                    <p class="pb-p2">
+                        Complete all missions to unlock <b>Week 4</b>
+                    </p>
                 </div>
             </div>
 
@@ -104,9 +109,7 @@
                     </div>
                     <div>
                         <button class="m-btn">View Missions</button>
-                        <select>
-                            <option></option>
-                        </select>
+                        <p>▼</p>
                     </div>
                 </div>
 
@@ -169,14 +172,14 @@
             </div>
         -->
             <div class="unlock">
-                <p><i class="fa-solid fa-lock"></i>Complete all missions to unlock <span>Week 4</span></p>
-            </div>
+                <button class="arrow-btns"><i class="fa-solid fa-arrow-left"></i>Previous Week</button>
 
-            <div class="arrow-btns">
-                <button><i class="fa-solid fa-arrow-left"></i>Previous Week</button>
-                <button class="btn1"><i class="fa-solid fa-lock"></i>Next Week<i class="fa-solid fa-arrow-right"></i></button>
+                <p><i class="fa-solid fa-lock"></i>Complete all missions to unlock next week</p>
+                
+                <button class="arrow-btns"><i class="fa-solid fa-lock"></i>Next Week<i class="fa-solid fa-arrow-right"></i></button>
             </div>   
-        </div>
+           
+        
 
         
     </section>
