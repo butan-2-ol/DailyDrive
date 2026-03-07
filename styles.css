@@ -37,3 +37,21 @@
 .m-button i {
     color: rgb(3, 226, 3);
 }
+
+.logout-btn {
+    border: none;
+    background: #1d4b7a;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    gap: .4rem;
+    cursor: pointer;
+    margin-bottom: .3rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
+.logout-btn:hover {
+    color: rgb(224, 66, 66);
+}
