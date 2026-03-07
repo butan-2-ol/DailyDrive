@@ -136,7 +136,7 @@
                 </label>
 
         
-            <button>Login</button>
+            <button type="submit">Login</button>
        
             </form>
             <p id="message"></p>
@@ -190,6 +190,8 @@
         // simple login check
         if(username === "admin" && password === "1234"){
 
+            localStorage.setItem("user", username);
+
             message.textContent = "Login successful!";
             message.style.color = "green";
 
@@ -208,12 +210,16 @@
                     card,clssList.remove("shake");
                 }, 400);
             
-            form.password.value = "";
+           // form.password.value = "";
         }
 
     });
 
-</script>
+    
+            
+        </script>
+
+
    
 </body>
 </html>
