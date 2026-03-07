@@ -1,266 +1,39 @@
-
-* {
-    box-sizing: border-box;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #1d4b7a;
-    color: white;
-    padding: 5px 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60%;
-    padding: 0 auto;
-    margin-left: auto;
-    border-bottom: 1px solid #f5f5f5;
-    position: fixed;
-    width: 100%;
-    height: 4rem;
-}
-
-main {
-    padding: 20px;
-}
-
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    background-color: white;
-    margin: 10px 0;
-    padding: 8px 15px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.m-card {
+.card-container {
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin: .5rem;
-    width: 80%;
-    border-radius: .6rem;
-    padding: .3rem .9rem;
-    overflow: hidden;
+    gap: 1.8rem;
+}
+
+.card {
+    width: 100%;
+    min-width: 550px;
+    background: #eee;
+    padding: .8rem 1.5rem;
+    border-radius: .8rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    background: #fff;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    /*gap: 10rem;*/
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'segoe ui', arial;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.4);
     flex: 1;
 }
 
-.m-card p {
-    font-size: 1.5rem;
-    font-family: gadong, serif, helvetica;
-    text-align: center;
-    display: inline-block;
-    margin-top: 0;
-}
-
-
 .m-button {
-    background: #1d4b7a;
-    border: none;
-    border-radius: .35rem;
-    min-width: 15rem;
-    font-size: 1.3rem;  
-    font-family: monaco;
-    color: #eee;
-    transition: all .3s ease-in-out;
-    padding: .4rem .4rem ;
-    height:  auto;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
     display: flex;
-    gap: 5px;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
+    padding: .5rem 1.2rem;
+    gap: .5rem;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: .6rem;
+    font-size: .9rem;
+    background: #2464c3;
+    color: #eee;
+    font-weight: bold;
 }
 
 .m-button i {
-    color: rgb(111, 222, 111);
-}
-.m-button:hover {
-    transform: translateY(-1.3px);
-}
-
-.cta-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    color: red;
-}
-.cta-btn {
-    background: #1d4b7a;
-    border: none;
-    border-radius: .35rem;
-    min-width: 7rem;
-    font-size: 1.3rem;  
-    font-family: monaco;
-    color: #eee;
-    transition: all .3s ease-in-out;
-    padding: .3rem .33rem ;
-    height:  auto;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    /*display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    border: none;
-    padding: 0.5rem 0.8rem;
-    */
-}
-
-
-.cta {
-    display: flex;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 1.2rem;
-    width: 100%;
-    border-radius: .6rem;
-    padding: .3rem .9rem;
-    overflow: hidden;
-    justify-content: space-between;
-    background: #fff;
-    flex-wrap: nowrap;
-    margin-top: 5rem;
-    width: 50%;
-    gap: 5px;
-}
-
-.cta p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-.m-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  max-height: 100vh;
-  padding: 10px 20px;
-
-  gap: 5px;
-  flex: 1;
-  margin-top: 6rem;
-}
-
-.sidebar {
-    max-width: 200px;
-    background-color: #1d4b7a;
-    padding: 20px;
-    height: 100vh;
-    padding-top: 7.5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-links a {
-    display: flex;
-    gap: 10px;
-    color: #eee;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: .3rem .4rem;
-    margin: .3rem;
-    border-radius: .4rem;
-    transition: all 0.7s ease;
-    font-family: lucida;
-}
-
-
-.sidebar a:hover {
-    background-color: #f4f4f4;
-    color: #000;
-}
-
-.sidebar a:active {
-    background-color: #f9f9;
-    color: #000;
-}
-
-.page-container {
-    display: flex;
-}
-
-
-.sidebar img {
-    border-radius: 100%;
-    width: 170px;
-    height: 150px;
-    border: 2px solid #f5f5f5;
-}
-
-.profile {
-    color: #f5f5f5;
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
-
-.logins {
-    font-size: 1rem;
-    margin-top: auto;
-}
-
-.logins a {
-    display: block;
-    margin-top: 10px;
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: all 0.5s ease;
-}
-
-.logins a:hover {
-    color: red;
-    background: none;
-}
-.controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #f5f5f5;
-}
-
-.controls i:hover {
-    cursor: pointer;
-}
-
-.right-bar {
-    max-width: 200px;
-    background-color: #1d4b7a;
-    padding: 20px;
-    height: 100vh;
-    padding-top: 7.5rem;
-    display: flex;
-    flex-direction: column;
-    flex: 0;
+    color: rgb(3, 226, 3);
 }
