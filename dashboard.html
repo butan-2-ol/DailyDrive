@@ -12,8 +12,11 @@
 </head>
 <body>
     <section class="page-cont"> 
-        <div class="sidebar-cont">
+        <div class="sidebar-cont" id="sidebar">
+            <button id="menu-toggle">☰</button>
+
             <div class="logo">
+                
                 <img src="images/logo.png" alt="logo">
                 <p>DailyDrive</p>
             </div>
@@ -21,7 +24,7 @@
             <div class="user-bar">
                 <img src="images/user.jpg" alt="user image">
                 <div class="user-wlc-note">
-                    <p><b>Welcome, <span id="username"></span>👋</b></p>
+                    <p><b><span id="greeting"></span>, <span id="username"></span>👋</b></p>
                     <p>Stay on track💪</p>
                 </div>
             </div>
@@ -67,10 +70,10 @@
                 </aside>
 
                 <div>
-                    <span>Week 3 | </span><span>Tuesday, April 30, 2028</span>
+                    <span>Week 3 | <span id="current-date">Tuesday, April 30, 2028</span> </span> | <span id ="live-clock"> | </span>
                     <span>
                         <i class="fa-solid fa-bell"></i>
-                        <i class="fa-solid fa-user"></i>
+                        <a href="profile.html"><i class="fa-solid fa-user"></i></a>
                     </span>
                 </div>
             </header>
@@ -119,9 +122,10 @@
     </section>
 
     <script>
+        //directing to login page if jumped to dashboard straight
+
         const username = localStorage.getItem("user");
 
-        //document.getElementById("username").textContent = username;
 
         if (!username) {
             window.location.href = "index.html";
@@ -129,6 +133,7 @@
 
         document.getElementById("username").textContent = username;
 
+            //adding finctionality to logout button
 
         const logoutBtn = document.getElementById("logout-btn");
 
@@ -147,6 +152,68 @@
         }
 
         });
+
+        //adding a date element, updating date to current
+
+        const dateElement = document.getElementById("current-date");
+        const  today = new Date();
+
+        const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        };
+
+        const formattedDate = today.toLocaleDateString("en-us", options);
+        dateElement.textContent = formattedDate;
+       
+
+        //adding live time/ clock updates 
+
+        const clockElement = document.getElementById("live-clock");
+
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            clockElement.textContent = time;
+        }
+
+        setInterval(updateClock, 1000);
+
+        //adding a greeting element
+
+        const greetingElement = document.getElementById("greeting");
+        const hour = new Date().getHours();
+
+        let greeting;
+
+        if (hour < 12 ) {
+            greeting = "Good morning";
+        }
+
+        else if (hour < 18) {
+            greeting = "Good afternoon";
+        }
+        
+        else {
+            greeting = "Good evening";
+        }
+
+        const user = localStorage.getItem("user");
+        greetingElement.textContent = `${greeting}`; //${user}`;
+
+        //toggling menu
+
+        const toggleBtn = document.getElementById("menu-toggle");
+        const sidebar = document.getElementById("sidebar");
+        const mainContent = document.querySelector(".main-cont");
+
+        toggleBtn.addEventListener("click", function() {
+            sidebar.classList.toggle("collapsed");
+             mainContent.classList.toggle("sidebar-collapsed");
+        });
+
     </script>
 </body>
 </html>
