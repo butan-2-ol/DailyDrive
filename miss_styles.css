@@ -111,6 +111,20 @@ body {
 
 }
 
+.logout-btn {
+    border: none;
+    background: #1d4b7a;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    gap: .4rem;
+    cursor: pointer;
+    margin-bottom: .3rem;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+
 /*snippet for shrinked sidebar*/
 
 /* Collapsed sidebar */
